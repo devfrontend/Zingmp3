@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+:root {
+    --primary-bg: #432275;
+    --layout-bg: #170f23;
+    --sidebar-popup-bg: #2a213a;
+    --alpha-layout-bg: rgba(41, 21, 71, 0.8);
+    --queue-player-popup-bg: #120822;
+    --blur-queue-bg: rgba(30, 21, 47, 0.9019607843137255); //
+    --purple-primary: #7200a1;
+    --link-text-hover: #c662ef;
+    --chart-bg-img-alpha: rgba(32, 19, 53, 0.9);
+    --chart-box-bg-alpha: hsla(0, 0%, 100%, 0.05);
+    --link-text: #dadada;
+    --alpha-active-sidebar: 'hsla(0, 0%, 100%, 0.1)';
+    --white: #fff;
+    --grey: #333;
+
+    --font-family: 'Inter';
+    --font-second: 'Dancing Script';
+    --offset-top: 70px;
+    --offset-padding-page: 0 4%;
+    --height-logo: 70px;
+    --width-sidebar: 240px;
+    --width-sidebar-extend: 240px;
+    --width-right-sidebar: 314px;
+    --height-option-sidebar: 54px;
+    --height-line-divider-sidebar: 22px;
+    --height-line-divider-sidebar-extend: 44px;
+    --height-player: 90px;
+    --width-search-fields: 540px;
+}
+@media screen and (max-width: 1200px) {
+    :root {
+        --width-sidebar: 70px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    :root {
+        --width-search-fields: 400px;
+    }
+}
+@media screen and (max-width: 876px) {
+    :root {
+        --offset-padding-page: 0 2%;
+    }
+}
+@media screen and (max-width: 786px) {
+    :root {
+        --width-search-fields: 300px;
+    }
+}
+@media screen and (max-width: 576px) {
+    :root {
+        --width-sidebar: 0px !important;
+    }
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter';
+    user-select: none;
+}
+html {
+    color: var(--link-text-color);
+    font-size: 62.5%;
+    ::-webkit-scrollbar {
+        width: 4px;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: var(--link-text);
+        border-radius: 10px;
+    }
+}
+body {
+    font-size: 1.6rem;
+    color: var(--white);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    background-repeat: no-repeat;
+    background-size: 140%;
+    .tippy-box {
+        font-family: 'Inter';
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 1.2rem;
+        background-color: var(--grey);
+        color: #fff;
+    }
+    .tippy-content {
+        padding: 5px 10px;
+    }
+    a {
+        text-decoration: none;
+    }
+    button {
+        background-color: transparent;
+        border: transparent;
+        outline: none;
+    }
+}
+h1 {
+    font-size: 4rem;
+}

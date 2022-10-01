@@ -1,0 +1,76 @@
+.wrapper {
+    width: 100%;
+    height: 100%;
+    padding: var(--offset-padding-page);
+    overflow-y: hidden;
+    padding-top: calc(var(--offset-top) + 30px);
+    position: relative;
+    .bg-blur,
+    .bg-alpha,
+    .bg-alpha1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 450px;
+        z-index: 0;
+    }
+    .bg-blur {
+        z-index: 0;
+        background: url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.7.28/static/media/week-chart-bg.edf332e5.jpg) 50%
+            center / cover no-repeat;
+        filter: grayscale(1);
+    }
+    .bg-alpha {
+        background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0) 37%, var(--layout-bg));
+    }
+    .bg-alpha1 {
+        opacity: 0.8;
+        background-image: linear-gradient(180deg, var(--layout-bg), var(--layout-bg));
+    }
+    .header {
+        width: 100%;
+        margin-bottom: 10px;
+        z-index: 9;
+        height: 200px;
+        position: relative;
+        .tab {
+            width: 100%;
+            display: flex;
+            margin: 30px 0;
+            align-items: center;
+            .tab-item {
+                font-size: 2.4rem;
+                text-transform: uppercase;
+                white-space: nowrap;
+                font-weight: 800;
+                color: var(--white);
+                opacity: 0.8;
+                margin-right: 35px;
+                padding: 15px 0;
+                border-bottom: 3px solid transparent;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+            .active {
+                border-bottom: 3px solid var(--purple-primary);
+                opacity: 1;
+            }
+        }
+        .time {
+            background-color: hsla(0, 0%, 100%, 0.1);
+            border: none;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+    .content {
+        height: calc(100vh - 200px - var(--height-logo) - var(--height-player));
+        overflow-y: scroll;
+        padding-bottom: 40px;
+        position: relative;
+    }
+}

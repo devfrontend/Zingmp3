@@ -1,0 +1,60 @@
+.button {
+    cursor: pointer;
+    border-radius: 999px;
+    color: var(--white);
+    font-weight: 500;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.cirlcel {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    &:hover {
+        background-color: var(--chart-box-bg-alpha);
+    }
+}
+.circlem {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--chart-box-bg-alpha);
+}
+.circles {
+    width: 32px;
+    height: 32px;
+    font-size: 1.4rem;
+    border-radius: 50%;
+    &:hover {
+        background-color: var(--chart-box-bg-alpha);
+    }
+}
+.roundedm {
+    display: inline-block;
+    padding: 8px 25px;
+    font-size: 1.4rem;
+    border: 1px solid var(--white);
+    &:hover {
+        background-color: var(--chart-box-bg-alpha);
+    }
+}
+.roundeds {
+    display: inline-block;
+    padding: 4px 24px;
+    font-size: 1.2rem;
+    border: 1px solid var(--white);
+    &:hover {
+        opacity: 0.9;
+    }
+}
+.purple {
+    background-color: var(--purple-primary);
+    &:hover {
+        background-color: var(--purple-primary);
+        opacity: 0.8;
+    }
+}

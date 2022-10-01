@@ -1,0 +1,40 @@
+.wrapper {
+    width: 100%;
+    position: relative;
+    padding-top: calc(var(--offset-top) + 40px);
+    .bg-blur,
+    .bg-alpha,
+    .bg-alpha1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 0;
+        inset: 0;
+        max-height: 500px;
+    }
+    .bg-blur {
+        background: url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.7.28/static/media/bg-chart.fd766403.jpg) center
+            top / cover no-repeat;
+        filter: grayscale(1);
+    }
+    .bg-alpha {
+        background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0) 37%, var(--layout-bg));
+    }
+    .bg-alpha1 {
+        opacity: 0.9;
+        background-image: linear-gradient(180deg, var(--layout-bg), var(--layout-bg));
+    }
+    .header {
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding: var(--offset-padding-page);
+        .title {
+            margin: 20px 10px;
+        }
+    }
+    .content {
+        position: relative;
+    }
+}

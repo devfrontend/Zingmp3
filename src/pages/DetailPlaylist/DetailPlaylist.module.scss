@@ -1,0 +1,149 @@
+.wrapper {
+    padding: var(--offset-padding-page);
+    margin-top: var(--offset-top);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    .info {
+        .avatar {
+            border-radius: 10px;
+            max-width: 300px;
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+            margin: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            &.avatar-playing {
+                border-radius: 50%;
+            }
+            .img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                transition: transform 0.6s;
+                &:hover {
+                    transform: scale(1.1);
+                }
+                &.img-playing {
+                    border-radius: 50%;
+                    animation: rotating 10s linear infinite;
+                }
+            }
+            .play {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 2.5rem;
+                background-color: transparent;
+                border: 1px solid var(--white);
+                display: none;
+            }
+            &:hover {
+                .play {
+                    display: flex !important;
+                }
+                img {
+                    filter: opacity(0.8);
+                }
+            }
+        }
+        .desc {
+            text-align: center;
+            .title {
+                font-size: 2rem;
+                width: 100%;
+                max-width: 300px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .time,
+            .artist-name,
+            .liked {
+                font-size: 1.2rem;
+                line-height: 2.1rem;
+                color: var(--link-text);
+            }
+            .artist-name {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                &:hover {
+                    text-decoration: underline;
+                    color: var(--link-text-hover);
+                }
+            }
+        }
+        .play-btn {
+            margin-left: 50%;
+            transform: translateX(-50%);
+            margin-top: 10px;
+            border-color: var(--purple-primary);
+        }
+    }
+    .content {
+        height: calc(100vh - var(--height-logo) - var(--height-player));
+        overflow-y: scroll;
+        padding: 0 2%;
+        .sort-description {
+            font-size: 1.4rem;
+            margin: 20px;
+            span {
+                color: var(--link-text);
+                font-weight: 500;
+            }
+        }
+        .section-title {
+            margin: 40px 0 10px 20px;
+            font-size: 2rem;
+        }
+    }
+    .content::-webkit-scrollbar-thumb {
+        background: transparent;
+    }
+    &:hover .content::-webkit-scrollbar-thumb {
+        background: rgba($color: #000000, $alpha: 0.4);
+    }
+}
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+    from {
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotating {
+    from {
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -ms-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@media screen and (max-width: 768px) {
+    .wrapper {
+        grid-template-columns: 1fr !important;
+    }
+}
+@media screen and (max-width: 576px) {
+    .content {
+        height: auto !important;
+    }
+}

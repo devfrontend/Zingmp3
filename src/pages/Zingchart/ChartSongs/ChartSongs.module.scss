@@ -1,0 +1,9 @@
+.wrapper {
+    padding: var(--offset-padding-page);
+    .option-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+}

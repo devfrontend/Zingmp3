@@ -1,0 +1,10 @@
+.wrapper {
+    width: calc(100vw - var(--width-sidebar) - var(--width-right-sidebar));
+    padding: var(--offset-padding-page);
+    margin-bottom: 40px;
+}
+@media screen and (max-width: 1599px) {
+    .wrapper {
+        width: calc(100vw - var(--width-sidebar)) !important;
+    }
+}
